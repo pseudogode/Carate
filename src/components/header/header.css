@@ -1,0 +1,10 @@
+.navbar {
+  border: 1px solid black;
+  display: flex;
+  gap: 10px;
+}
+
+.menu-container {
+  display: flex;
+  gap: 20px;
+}
