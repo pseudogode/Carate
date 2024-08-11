@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import App from './app.tsx'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/home/Home.tsx'
 import Market from './pages/market/market.tsx'
@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path='verify' element={<Verify/>}/>
           <Route path='contacts' element={<Contacts/>}/>
         </Route>
-        
+
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>

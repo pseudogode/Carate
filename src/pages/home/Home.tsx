@@ -1,10 +1,12 @@
-import Map from "../../components/map/map";
+
+import Map from '../../components/map/map';
+import './home.css'
 
 function Home() {
   return (
     <>
     <p> Home </p>
-    <Map></Map>
+      <Map/>
     </>
   );
 }
