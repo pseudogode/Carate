@@ -1,6 +1,10 @@
+import Box from "../../components/box/box";
+
 function Verify() {
   return (
-    <p> Verify car! </p>
+    <Box style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <h1> Очаквайте скоро! </h1>
+    </Box>
   );
 }
 

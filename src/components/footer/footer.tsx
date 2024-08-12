@@ -2,9 +2,7 @@ import './footer.css'
 
 function Footer() {
   return (
-    <div className="bottom">
-      <p> Footer </p>
-    </div>
+      <p> 2024 </p>
     );
 }
 

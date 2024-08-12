@@ -1,4 +1,22 @@
-.flex-container {
-  display: grid;
-  grid-template-rows: 1fr auto;
+.app-root {
+  height: 100vh;
+}
+
+.app-content {
+  height: 85vh;
+}
+
+/* .app-header .app-footer {
+  height: 10vh;
+} */
+
+.app-section {
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+}
+
+.app-outlet-container {
+  height: 80vh;
 }

@@ -5,10 +5,16 @@ import './app.css'
 
 function App() {
   return (
-    <div className="flex-container">
-      <Header/>
-      <Outlet/>
-      <Footer/>
+    <div className="app-root">
+      <div className='app-header'>
+        <Header/>
+      </div> 
+      <div className="app-section app-content"> 
+        <Outlet/>
+      </div>
+      <div className='app-section app-footer'>
+        <Footer/>
+      </div>
     </div>
   );
 }
