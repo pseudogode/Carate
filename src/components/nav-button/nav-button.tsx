@@ -12,7 +12,7 @@ function NavButton({ link, text }: Props) {
   const active = pathname === link;
 
   return ( 
-    <Button className="nav-button" href={link} style={active ? { backgroundColor: 'black', color: 'white' } : {}}>
+    <Button className="nav-button" href={link} style={active ? { backgroundColor: '#61ACBB', color: 'white' } : {}}>
       {text}
     </Button>
    );

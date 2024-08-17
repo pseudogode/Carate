@@ -1,0 +1,11 @@
+@import '/src/theme/colors';
+
+.header-navbar {
+  height: 5vh;
+  display: flex;
+  gap: 20px;
+  background-color: $darkBlueBackground;
+  border-radius: 4px;
+  margin: 8px;
+  justify-content: center;;
+}
