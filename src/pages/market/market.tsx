@@ -1,16 +1,33 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Box from "../../components/box/box";
-import CarOfferCard from "./components/car-offer-card/car-offer-card";
-import './market.scss'
+import CarOfferCard, { CarBrand, CarInfo } from "./components/car-offer-card/car-offer-card";
+import './market.scss';
+
+const carInfo: CarInfo[] = [
+  {
+    brand: CarBrand.Toyota,
+    model: 'Corolla',
+  },
+  {
+    brand: CarBrand.Toyota,
+    model: 'Rav4',
+  },
+  {
+    brand: CarBrand.Skoda,
+    model: 'Superb'
+  },
+  {
+    brand: CarBrand.Toyota,
+    model: 'Celica'
+  }
+];
 
 function Market() {
-  const a: number[] = Array.from(Array(16), (_, n) => n);
-  
-  return (
+    return (
     <Box className='market-root'>
-    {a.map((_, index) => 
+    {carInfo.map((car, index) => 
       (<Box key={index} style={{padding: '16px'}}>
-        <CarOfferCard/>
+        <CarOfferCard carInfo={car}/>
       </Box>)
     )}
 
