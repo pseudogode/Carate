@@ -7,7 +7,7 @@ function Market() {
   
   return (
     <div className='market-root'>
-    {a.map(_ => <Box style={{border: '1px dashed grey', height: '32px', margin: '16px'}}>
+    {a.map((_, index) => <Box key={index} style={{border: '1px dashed grey', height: '32px', margin: '16px'}}>
       Offer
     </Box>)}
     <p>...</p>
