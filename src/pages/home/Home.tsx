@@ -23,12 +23,14 @@ function Home() {
       className='home-root' 
       style={{ backgroundSize: '100% auto',backgroundImage: `url(${ToyotaWallpaper})`, backgroundRepeat: 'no-repeat'}}
     >
-      <Box className='home-info'>
-        <Topic label='Внос на висок клас автомобили'></Topic>
-        <Topic label='Съдействие за регистрация в КАТ'></Topic>
-        <Topic label='Лизинг'></Topic>
-        <Topic label='Застраховане на автомобила'></Topic>
-      </Box>
+      <Box style={{padding: '16px'}}>
+        <Box className='home-info'>
+          <Topic label='Внос на висок клас автомобили'></Topic>
+          <Topic label='Съдействие за регистрация в КАТ'></Topic>
+          <Topic label='Лизинг'></Topic>
+          <Topic label='Застраховане на автомобила'></Topic>
+        </Box>
+      </Box>  
     </Box>
   );
 }
