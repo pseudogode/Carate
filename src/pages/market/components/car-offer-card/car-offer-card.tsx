@@ -1,4 +1,4 @@
-import { Avatar, Backdrop, Box, Card, CardContent, CardHeader, CardMedia, Fade, Modal, Typography } from "@mui/material";
+import { Avatar, Box, Card, CardHeader, CardMedia, Fade, Modal, Typography } from "@mui/material";
 import './car-offer-card.scss'
 
 import Toyota from '../../../../assets/toyota.png'
