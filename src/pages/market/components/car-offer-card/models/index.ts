@@ -1,5 +1,5 @@
 export enum CarBrand {
-  Toyota = 'Toyota', Skoda = 'Skoda'
+  Toyota = 'Toyota', Skoda = 'Skoda', Unkown = '...'
 }
 
 export interface CarInfo {

@@ -2,11 +2,20 @@
 
 .root {
   height: 100%;
-  width: 100%;
-  cursor: pointer;
+  width: 100%;  
+
+  &:hover {
+    border-style:groove;
+    cursor: pointer;
+
+    $factor: 1.05;
+    transform: scale($factor, $factor);
+    -ms-transform: scale($factor, $factor); /* IE 9 */
+    -webkit-transform: scale($factor, $factor);
+  }
 }
 
-.logo {
+.mainImage {
   height: 250px;
   padding: 1em 1em 0 1em;
   object-fit: contain;

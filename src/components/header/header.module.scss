@@ -1,11 +1,10 @@
 @import '/src/theme/colors';
 
-.navbar {
-  height: 5vh;
+.root {
+  height: 100%;
   display: flex;
   gap: 20px;
   background-color: $primary;
   border-radius: 4px;
-  margin: 8px;
   justify-content: center;
 }

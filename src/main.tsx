@@ -4,7 +4,7 @@ import App from './app.tsx'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/home/Home.tsx'
 import Market from './pages/market/market.tsx'
-import Verify from './pages/verify/verify.tsx'
+import Order from './pages/order/order.tsx'
 import Contacts from './pages/contacts/contacts.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App/>}>
           <Route index element={<Home/>}/>
           <Route path='market' element={<Market/>}/>
-          <Route path='verify' element={<Verify/>}/>
+          <Route path='order' element={<Order/>}/>
           <Route path='contacts' element={<Contacts/>}/>
         </Route>
 

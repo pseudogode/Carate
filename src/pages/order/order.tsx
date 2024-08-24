@@ -1,6 +1,6 @@
 import Box from "../../components/box/box";
 
-function Verify() {
+function Order() {
   return (
     <Box style={{ padding: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white'}}>
       <h1> Очаквайте скоро! </h1>
@@ -8,4 +8,4 @@ function Verify() {
   );
 }
 
-export default Verify;
+export default Order;

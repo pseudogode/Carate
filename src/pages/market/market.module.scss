@@ -1,15 +1,29 @@
 @import '../../theme/colors';
 
 .root {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 16px;
+  scrollbar-color: $secondary $primary;
+  display: grid;
+  overflow: auto;
   background-color: $secondary-fade1;
-  height: 100%;
+  padding: 32px 32px 0 32px;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  height: 83%; // FIXME: 
+  margin-bottom: 10%;
 }
 
-.offer {
-  padding: 16px;
-  width: 20%;
-  height: 33%;
+@media screen and (max-width: 2000px) {
+  .root {
+    grid-template-columns: repeat(auto-fit, 250px);
+  }
+}
+
+@media screen and not (max-width: 2000px) {
+  .root {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.customOffer {
+  opacity: 0.5;
 }
