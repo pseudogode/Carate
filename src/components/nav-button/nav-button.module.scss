@@ -1,6 +1,6 @@
 @import '/src/theme/colors';
 
-.nav-button {
+.root {
   display: flex;
   border-radius: 4px;
   min-width: 8vw;
@@ -18,7 +18,7 @@
   text-decoration: none;
 }
 
-.nav-button.active {
+.root.active {
   background-color: $secondary;
   color: white;
 }

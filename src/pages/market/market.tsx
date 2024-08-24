@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import Box from "../../components/box/box";
 import CarOfferCard from "./components/car-offer-card/car-offer-card";
 import { CarBrand, CarInfo } from "./components/car-offer-card/models";
-import './market.scss';
+import classes from './market.module.scss';
 
 const carInfo: CarInfo[] = [
   {
@@ -29,9 +28,9 @@ const carInfo: CarInfo[] = [
 
 function Market() {
     return (
-    <Box className='market-root'>
+    <Box className={classes.root}>
     {carInfo.map((car, index) => 
-      (<Box key={index} className='market-offer'>
+      (<Box key={index} className={classes.offer}>
         <CarOfferCard carInfo={car}/>
       </Box>)
     )}

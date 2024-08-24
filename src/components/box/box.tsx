@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import './box.css'
+import classes from './box.module.scss'
 
 interface Props {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface Props {
 
 function Box({ children, style = {}, className = '' }: Props) {
   return ( 
-    <div className={ 'box-root' + `${className.length ? ' ' : ''}${className}` } style={ style }>
+    <div className={`${classes.root} ${className}` } style={ style }>
       {children}
     </div>
    );

@@ -4,27 +4,23 @@ body {
   background-color:$primary;
 }
 
-.app-root {
+.root {
   height: 100%;
 }
 
-.app-content {
+.content {
   height: 85vh;
 }
 
-.app-header {
+.header {
   margin: 16px
 }
 
-/* .app-header .app-footer {
+/* .header .footer {
   height: 10vh;
 } */
 
-.app-section {
+.section {
   margin-left: 8px;
   margin-right: 8px;
-}
-
-.app-outlet-container {
-  height: 80vh;
 }

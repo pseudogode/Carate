@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/header/header";
-import './app.scss'
+import classes from './app.module.scss'
 
 function App() {
   return (
-    <div className="app-root">
-      <div className='app-header'>
+    <div className={classes.root}>
+      <div className={classes.header}>
         <Header/>
       </div> 
-      <div className="app-section app-content"> 
+      <div className={`${classes.section} ${classes.content}`}> 
         <Outlet/>
       </div>
       {/* <div className='app-section app-footer'>

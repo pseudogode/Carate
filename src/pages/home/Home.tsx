@@ -1,6 +1,6 @@
 
 import Box from '../../components/box/box'
-import './home.scss'
+import classes from './home.module.scss'
 import '../../theme/_colors.scss' 
 import ToyotaWallpaper from '../../assets/toyota-wallpaper.jpg'
 import { ReactNode } from 'react';
@@ -9,22 +9,22 @@ import { GoDotFill } from 'react-icons/go';
 function Home() {
   const Topic = ({ label, children }: {icon?: ReactNode, label: string, children?: ReactNode}) => 
     (<Box>
-      <Box className='home-topic-label'>
+      <Box className={classes.topicLabel}> 
         <GoDotFill/>
-        <p style={{fontSize: '24px'}}> {label} </p>
+        <p> {label} </p> {/* fontsize: 24px */}
       </Box>
-      <Box className='home-topic-text'>
+      <Box className={classes.topicText}>
         {children}
       </Box>
     </Box>);
 
   return (
     <Box 
-      className='home-root' 
+      className={classes.root}
       style={{ backgroundSize: '100% auto',backgroundImage: `url(${ToyotaWallpaper})`, backgroundRepeat: 'no-repeat'}}
     >
       <Box style={{padding: '16px'}}>
-        <Box className='home-info'>
+        <Box className={classes.info}>
           <Topic label='Внос на висок клас автомобили'></Topic>
           <Topic label='Съдействие за регистрация в КАТ'></Topic>
           <Topic label='Лизинг'></Topic>

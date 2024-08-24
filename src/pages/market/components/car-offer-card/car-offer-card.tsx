@@ -1,5 +1,5 @@
 import { Avatar, Box, Card, CardHeader, CardMedia, Fade, Modal, Typography } from "@mui/material";
-import './car-offer-card.scss'
+import classes from  './car-offer-card.module.scss'
 
 import Toyota from '../../../../assets/toyota.png'
 import Skoda from '../../../../assets/skoda.png'
@@ -40,9 +40,9 @@ function CarOfferCard({ carInfo }: Props) {
 
   return (
     <div onClick={() => setOpen(true)}>
-      <Card raised className='car-offer-card-root' style={{backgroundColor: 'transparent'}} >
+      <Card raised className={classes.root} style={{backgroundColor: 'transparent'}} >
         <CardHeader 
-          className='car-offer-header'
+          className={classes.header}
           avatar={
             <Avatar aria-label="recipe">
               <img style={{height: '100%', width: '100%'}}src={getLogoByBrand(brand)}></img>
@@ -55,7 +55,7 @@ function CarOfferCard({ carInfo }: Props) {
           component="image"
           
           image={carPhotoPlaceholderUrl}
-          className='car-offer-card-logo'
+          className={classes.logo}
         />
       </Card>
       <Modal sx={style} open={open} onClose={() => setOpen(false)} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">

@@ -1,8 +1,8 @@
-import './footer.css'
+import classes from './footer.module.scss'
 
 function Footer() {
   return (
-      <p> 2024 </p>
+      <p className={classes.root}> 2024 </p>
     );
 }
 

@@ -1,5 +1,5 @@
 import { Button } from "@mui/base";
-import './nav-button.scss'
+import classes from './nav-button.module.scss'
 import { useLocation } from "react-router-dom";
 
 interface Props {
@@ -12,7 +12,7 @@ function NavButton({ link, text }: Props) {
   const active = pathname === link;
 
   return ( 
-    <Button className={`nav-button ${active ? 'active' : ''}`} href={link}>
+    <Button className={`${classes.root} ${active ? classes.active : ''}`} href={link}>
       {text}
     </Button>
    );
