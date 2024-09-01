@@ -40,7 +40,7 @@ function Contacts() {
             <p>+359 89 9239925</p>
           </ContactsInfoLabel>     
           <ContactsInfoLabel icon = {<AiOutlineMail/>} text='Изпрати имейл'>
-          <p>bayhuy1979@gmail.com</p>
+          <p>stoianpetkov79@gmail.com</p>
           </ContactsInfoLabel>
         </Box>
         <Box className={`${classes.fade} ${classes.padding}`} style={{justifyContent: 'center', display: 'flex' }}>

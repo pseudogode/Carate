@@ -1,0 +1,17 @@
+@import '/src/theme/colors';
+
+.root { 
+  padding: 16px;
+  color: white;
+  height: 100%;
+}
+
+.padding {
+  padding: 16px;
+}
+
+.formContainer {
+  background-color: $secondary-fade5;
+  padding: 16px;
+  width: min-content;
+}
