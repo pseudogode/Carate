@@ -1,0 +1,10 @@
+{
+  "translation": {
+    "navBarButtons": {
+      "home": "Home",
+      "offers": "Offers",
+      "order": "Order",
+      "contacts": "Contacts"
+    }
+  }
+}

@@ -3,8 +3,19 @@
 .root {
   height: 100%;
   display: flex;
+  justify-content: space-between;
+}
+
+.tabs {
+  height: 100%;
+  display: flex;
   gap: 20px;
   background-color: $primary;
   border-radius: 4px;
   justify-content: center;
+}
+
+.translate {
+  display:flex;
+  padding-right: 16px;
 }
