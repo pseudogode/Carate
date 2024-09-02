@@ -70,8 +70,7 @@ function CarOfferCard({ carInfo }: Props) {
           subheader={date}
         />
         <CardMedia
-          component="image"
-          
+          component="div"
           image={getPhotoByBrand(brand)}
           className={classes.mainImage}
         />
