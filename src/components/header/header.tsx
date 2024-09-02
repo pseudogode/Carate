@@ -13,7 +13,7 @@ export default function Header() {
         <NavButton link='/' text={t('home')}/>
         <NavButton link='/market' text={t('offers')}/>
         <NavButton link='/order' text={t('order')}/>
-        <NavButton link='/contacts' text={t('contacts')}/>ˆ
+        <NavButton link='/contacts' text={t('contacts')}/>
       </div>
       <div className={classes.translate}>
         <LanguageButton/>

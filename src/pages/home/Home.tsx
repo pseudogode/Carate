@@ -5,8 +5,11 @@ import '../../theme/_colors.scss'
 import ToyotaWallpaper from '../../assets/toyota-wallpaper.jpg'
 import { ReactNode } from 'react';
 import { GoDotFill } from 'react-icons/go';
+import { useTranslate } from '../../hooks/use-translate';
 
 function Home() {
+  const { t } = useTranslate('home');
+  
   const Topic = ({ label, children }: {icon?: ReactNode, label: string, children?: ReactNode}) => 
     (<Box>
       <Box className={classes.topicLabel}> 
@@ -25,10 +28,10 @@ function Home() {
     >
       <Box style={{padding: '16px'}}>
         <Box className={classes.info}>
-          <Topic label='Внос на висок клас автомобили'></Topic>
-          <Topic label='Съдействие за регистрация в КАТ'></Topic>
-          <Topic label='Лизинг'></Topic>
-          <Topic label='Застраховане на автомобила'></Topic>
+          <Topic label={t('t1')}></Topic>
+          <Topic label={t('t2')}></Topic>
+          <Topic label={t('t3')}></Topic>
+          <Topic label={t('t4')}></Topic>
         </Box>
       </Box>  
     </Box>

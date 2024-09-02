@@ -5,6 +5,18 @@
       "offers": "Offers",
       "order": "Order",
       "contacts": "Contacts"
+    },
+    "contacts": {
+      "location": "Location",
+      "workingHours": "Working hours",
+      "callUs": "Call us",
+      "email": "Email"
+    },
+    "home": {
+      "t1": "Import of luxury cars",
+      "t2": "Assistance for registration",
+      "t3": "Leasing",
+      "t4": "Insurance"
     }
   }
 }

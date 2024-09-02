@@ -9,8 +9,11 @@ import { ReactNode } from "react";
 import { LuClock, LuPhoneCall } from "react-icons/lu";
 import { AiOutlineMail } from "react-icons/ai";
 import ToyotaWallpaper from '../../assets/toyota-wallpaper.jpg'
+import { useTranslate } from "../../hooks/use-translate";
 
 function Contacts() {
+  const { t } = useTranslate('contacts');
+
   const ContactsInfoLabel = ({icon, text, children}: {icon: ReactNode, text: string, children?: ReactNode}) => 
   (<Box>
     <Box className={classes.infoLabel}>
@@ -29,17 +32,17 @@ function Contacts() {
     >
       <Box className={`${classes.info} ${classes.padding}`}>
         <Box className={`${classes.fade} ${classes.padding}`} >
-          <ContactsInfoLabel icon = {<MdOutlineLocationOn/>} text='Местоположение'>
+          <ContactsInfoLabel icon = {<MdOutlineLocationOn/>} text={t('location')}>
             <p>гр. София, ул. Кукуш 1</p>
           </ContactsInfoLabel>
-          <ContactsInfoLabel icon = {<LuClock/>} text='Работно време'>
+          <ContactsInfoLabel icon = {<LuClock/>} text={t('workingHours')}>
             <p>Понеделник - Петък</p>
             <p>08:00 – 17:00</p>
           </ContactsInfoLabel>
-          <ContactsInfoLabel icon = {<LuPhoneCall/>} text='Обади се'>
+          <ContactsInfoLabel icon = {<LuPhoneCall/>} text={t('callUs')}>
             <p>+359 89 9239925</p>
           </ContactsInfoLabel>     
-          <ContactsInfoLabel icon = {<AiOutlineMail/>} text='Изпрати имейл'>
+          <ContactsInfoLabel icon = {<AiOutlineMail/>} text={t('email')}>
           <p>stoianpetkov79@gmail.com</p>
           </ContactsInfoLabel>
         </Box>
