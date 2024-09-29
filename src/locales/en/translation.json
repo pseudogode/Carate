@@ -17,6 +17,19 @@
       "t2": "Assistance for registration",
       "t3": "Leasing",
       "t4": "Insurance"
+    },
+    "order": {
+      "contactSectionHeading": "How would you like to be contacted",
+      "carSectionHeading": "Describe your car",
+      "name": "Name",
+      "phone": "Phone number",
+      "email": "Email",
+      "brand": "Brand",
+      "model": "Model",
+      "year": "Year",
+      "price": "Price",
+      "details": "Details",
+      "description": "Please, provide detailed information about your request: e.g., engine, year, gearbox, color, equipment, mileage, etc."
     }
   }
 }
