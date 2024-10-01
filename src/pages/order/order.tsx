@@ -3,7 +3,7 @@ import classes from './order.module.scss';
 import ToyotaWallpaper from '../../assets/toyota-wallpaper.jpg'
 import { Controller, useForm } from "react-hook-form";
 import { useTranslate } from "../../hooks/use-translate";
-import { Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, Button, TextField } from "@mui/material";
 import { carService } from "../../services/car-service/car-service";
 import { useEffect } from "react";
 
@@ -52,12 +52,12 @@ function Order() {
             />
             <Controller
               control={control}
-              name='name'
+              name='email'
               render={({ field: {onChange, ref} }) => (
                 <TextField
                   ref={ref}
                   onChange={onChange}
-                  label={t('name')}
+                  label={t('email')}
                   required
                 />
               )}
@@ -109,20 +109,19 @@ function Order() {
                 <TextField
                   ref={ref}
                   multiline
-                  rows={4}
+                  minRows={2}
+                  maxRows={4}
                   onChange={onChange}
-                  onFocus={(e) => e.target.value  = e.target.value === t('description') ? '' : e.target.value }
-                  onBlur={(e) => { e.target.value = e.target.value === '' ? t('description') : e.target.value }  }
                   label={t('details')}
-                  defaultValue={t('description')}
+                  placeholder={t('description')}
                   required
                 />
               )}
             />
           </Box>  
-          <button type="submit">
-            събмит
-          </button>
+          <Button type="submit">
+            -----
+          </Button>
         </form>
       </Box>
     </Box>

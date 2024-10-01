@@ -13,6 +13,8 @@
   color: white; 
   display: flex; 
   height: 100%;
+  overflow: auto;
+  scrollbar-color: $secondary $primary;
 }
 
 .icon {

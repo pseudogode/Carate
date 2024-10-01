@@ -1,9 +1,11 @@
 @import '/src/theme/colors';
 
 .root { 
+  scrollbar-color: $secondary $primary;
   padding: 16px;
   color: white;
   height: 100%;
+  overflow: auto;
 }
 
 .padding {
@@ -12,7 +14,7 @@
 
 .formContainer {
   background-color: $secondary-fade5;
-  padding: 16px;
+  margin: 16px;
   width: 40%;
   border-radius: 4px;
 }
@@ -25,6 +27,10 @@
 .section {
   display: flex;
   flex-direction: column;
+
+  > div {
+    margin-top: 8px;
+  }
 }
 
 .sectionHeading {
