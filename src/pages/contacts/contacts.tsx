@@ -28,7 +28,7 @@ function Contacts() {
   return (
     <Box 
       className={`${classes.root} ${classes.padding}`}
-      style={{ backgroundSize: '100% auto',backgroundImage: `url(${ToyotaWallpaper})`, backgroundRepeat: 'no-repeat'}}
+      style={{ backgroundImage: `url(${ToyotaWallpaper})` }}
     >
       <Box className={`${classes.info} ${classes.padding}`}>
         <Box className={`${classes.fade} ${classes.padding}`} >
@@ -36,7 +36,7 @@ function Contacts() {
             <p>гр. София, ул. Кукуш 1</p>
           </ContactsInfoLabel>
           <ContactsInfoLabel icon = {<LuClock/>} text={t('workingHours')}>
-            <p>Понеделник - Петък</p>
+            <p>Понеделник - Петък</p> // TODO: 
             <p>08:00 – 17:00</p>
           </ContactsInfoLabel>
           <ContactsInfoLabel icon = {<LuPhoneCall/>} text={t('callUs')}>

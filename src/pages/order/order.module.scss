@@ -1,11 +1,34 @@
 @import '/src/theme/colors';
+@import '/src/theme/mixins';
+
+// TODO: scroll appears
 
 .root { 
+  @include background-image;
+  //
   scrollbar-color: $secondary $primary;
   padding: 16px;
   color: white;
-  height: 100%;
+  height: 83%; // FIXME: 
   overflow: auto;
+}
+
+.captchaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitButton {
+  &:global(.MuiButton-root) {
+    background-color: $secondary-fade7;
+    color: $primary;
+  }
+
+  &:global(.MuiButton-root):hover {
+    background-color: $secondary;
+  }
+  width: 30%;
 }
 
 .padding {
@@ -13,9 +36,12 @@
 }
 
 .formContainer {
-  background-color: $secondary-fade5;
+  background-color: $primary-fade7;
   margin: 16px;
+  min-width: 300px;
+  max-width: 800px;
   width: 40%;
+  overflow: visible;
   border-radius: 4px;
 }
 
@@ -30,6 +56,8 @@
 
   > div {
     margin-top: 8px;
+    background-color: $secondary-fade7;
+    border-radius: 4px;
   }
 }
 

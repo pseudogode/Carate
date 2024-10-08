@@ -1,4 +1,5 @@
 @import '/src/theme/colors';
+@import '/src/theme/mixins'; 
 
 .padding {
   padding: 16px;
@@ -10,6 +11,7 @@
 }
 
 .root {
+  @include background-image;
   color: white; 
   display: flex; 
   height: 100%;

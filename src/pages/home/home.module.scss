@@ -1,11 +1,13 @@
 @import '/src/theme/colors';
+@import '/src/theme/mixins';  
 
 #map { height: 30vh; }
 
 .root {
+  @include background-image;
   background-color: $primary;
-  height: 100%;
   padding: 16px;
+  height: 83%; // FIXME: 
 }
 
 .info {

@@ -24,7 +24,7 @@ function Home() {
   return (
     <Box 
       className={classes.root}
-      style={{ backgroundSize: '100% auto',backgroundImage: `url(${ToyotaWallpaper})`, backgroundRepeat: 'no-repeat'}}
+      style={{ backgroundImage: `url(${ToyotaWallpaper})` }}
     >
       <Box style={{padding: '16px'}}>
         <Box className={classes.info}>

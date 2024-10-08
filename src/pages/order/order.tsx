@@ -5,12 +5,15 @@ import { Controller, useForm } from "react-hook-form";
 import { useTranslate } from "../../hooks/use-translate";
 import { Autocomplete, Button, TextField } from "@mui/material";
 import { carService } from "../../services/car-service/car-service";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ReCAPTCHA from 'react-google-recaptcha';
+
 
 function Order() {
   const { handleSubmit, control } = useForm();
   const { t } = useTranslate('order');
   const onSubmit = (d) => alert(JSON.stringify(d));
+  const [captchaPassed, setCaptchaPassed] = useState(true);
   useEffect(() => {
     const makes = carService.getAllCarBrands();
     const modles= carService.getModelsByBrand('BMW');
@@ -20,7 +23,7 @@ function Order() {
   return (
     <Box
       className={`${classes.root} ${classes.padding}`}
-      style={{ backgroundSize: '100% auto',backgroundImage: `url(${ToyotaWallpaper})`, backgroundRepeat: 'no-repeat'}} 
+      style={{ backgroundImage: `url(${ToyotaWallpaper})` }} 
     >
       <Box className={classes.formContainer}>
         <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
@@ -119,9 +122,20 @@ function Order() {
               )}
             />
           </Box>  
-          <Button type="submit">
-            -----
-          </Button>
+          { !captchaPassed && 
+            <Box className={`${classes.padding} ${classes.captchaContainer}`}>
+              <ReCAPTCHA
+                sitekey={import.meta.env['VITE_RECAPTCHA_SITE_KEY']}
+                onChange={() => setCaptchaPassed((prev) => !prev)}
+                theme='dark'
+              />
+            </Box> }
+          { captchaPassed && 
+            <Box className={`${classes.padding} ${classes.captchaContainer}`}>
+              <Button className={classes.submitButton} type="submit">
+                Submit
+              </Button>
+            </Box> }
         </form>
       </Box>
     </Box>
