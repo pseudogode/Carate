@@ -28,7 +28,10 @@
   &:global(.MuiButton-root):hover {
     background-color: $secondary;
   }
-  width: 30%;
+
+  & {
+    width: 30%;
+  }
 }
 
 .padding {

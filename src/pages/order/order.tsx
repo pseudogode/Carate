@@ -1,24 +1,31 @@
-import Box from "../../components/box/box";
+import Box from '../../components/box/box';
 import classes from './order.module.scss';
 import ToyotaWallpaper from '../../assets/toyota-wallpaper.jpg'
-import { Controller, useForm } from "react-hook-form";
-import { useTranslate } from "../../hooks/use-translate";
-import { Autocomplete, Button, TextField } from "@mui/material";
-import { carService } from "../../services/car-service/car-service";
-import { useEffect, useState } from "react";
+import { Controller, useForm } from 'react-hook-form';
+import { useTranslate } from '../../hooks/use-translate';
+import { Autocomplete, Button, TextField } from '@mui/material';
+import { carService } from '../../services/car-service/car-service';
+import { useState } from 'react';
+import _ from 'lodash';
+
 import ReCAPTCHA from 'react-google-recaptcha';
 
+const phoneNumberRegex = /^(?=.{1,13}$)(0[0-9]*|\+359[0-9]*|\+|\+3|\+35)$/;
+
+const parse = (input:string, reg: RegExp) => reg.test(input) ? input : input.substring(0, input.length - 1);
+
+const parsePhoneNumber = (input: string) => parse(input, phoneNumberRegex);
 
 function Order() {
   const { handleSubmit, control } = useForm();
   const { t } = useTranslate('order');
   const onSubmit = (d) => alert(JSON.stringify(d));
+
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [captchaPassed, setCaptchaPassed] = useState(true);
-  useEffect(() => {
-    const makes = carService.getAllCarBrands();
-    const modles= carService.getModelsByBrand('BMW');
-    console.log(makes, modles);
-  }, []);
+  const [brands] = useState(() => carService.getAllCarBrands());
+  const [carData] = useState(() => carService.getCarData());
+  const [models, setModels] = useState<string[]>([]);
 
   return (
     <Box
@@ -37,6 +44,7 @@ function Order() {
                   ref={ref}
                   onChange={onChange}
                   label={t('name')}
+                  size='small'
                   required
                 />
               )}
@@ -47,8 +55,14 @@ function Order() {
               render={({ field: {onChange, ref} }) => (
                 <TextField
                   ref={ref}
-                  onChange={onChange}
+                  value={phoneNumber}
+                  onChange={(e) => {
+                    const parsed = parsePhoneNumber(e.target.value);
+                    setPhoneNumber(parsed);
+                    onChange(parsed);
+                  }}
                   label={t('phone')}
+                  size='small'
                   required
                 />
               )}
@@ -61,6 +75,7 @@ function Order() {
                   ref={ref}
                   onChange={onChange}
                   label={t('email')}
+                  size='small'
                   required
                 />
               )}
@@ -74,9 +89,12 @@ function Order() {
               name='brand'
               render={({ field: {onChange, ref} }) => (
                 <Autocomplete
-                  onChange={onChange}
+                  onChange={(_, newValue: string | null) => {
+                    onChange(newValue);
+                    setModels(carData.find(({ brand }) => brand === newValue)?.models ?? []);
+                  }}
                   ref={ref}
-                  options={['1','2','3','4']}
+                  options={brands}
                   renderInput={(params) => <TextField {...params} label={t('brand')} required/>}
                  />
               )}
@@ -88,7 +106,7 @@ function Order() {
                 <Autocomplete
                   onChange={onChange}
                   ref={ref}
-                  options={['1','2','3','4']}
+                  options={models}
                   renderInput={(params) => <TextField {...params} label={t('model')} required/>}
                  />
               )}
@@ -100,8 +118,8 @@ function Order() {
                 <Autocomplete
                   onChange={onChange}
                   ref={ref}
-                  options={['1','2','3','4']}
-                  renderInput={(params) => <TextField {...params} label={t('year')} required/>}
+                  options={_.range(1990, new Date().getFullYear() + 1).map(y => y.toString())}
+                  renderInput={(params) => <TextField {...params} label={t('year')}/>}
                  />
               )}
             />
@@ -117,7 +135,6 @@ function Order() {
                   onChange={onChange}
                   label={t('details')}
                   placeholder={t('description')}
-                  required
                 />
               )}
             />
@@ -132,7 +149,7 @@ function Order() {
             </Box> }
           { captchaPassed && 
             <Box className={`${classes.padding} ${classes.captchaContainer}`}>
-              <Button className={classes.submitButton} type="submit">
+              <Button className={classes.submitButton} type='submit'>
                 Submit
               </Button>
             </Box> }

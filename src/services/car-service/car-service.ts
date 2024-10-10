@@ -10,12 +10,12 @@ class CarService {
   //   }
   // })
 
-  async getAllCarBrands() {
+  getAllCarBrands() {
     return CAR_DATA.map(c => c.brand);
   }
 
-  async getModelsByBrand(brand: string) {
-    return CAR_DATA.filter(d => d.brand === brand).find(Boolean)?.models;
+  getCarData() {
+    return CAR_DATA;
   }
 }
 
