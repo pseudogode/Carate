@@ -36,7 +36,7 @@ function Contacts() {
             <p>гр. София, ул. Кукуш 1</p>
           </ContactsInfoLabel>
           <ContactsInfoLabel icon = {<LuClock/>} text={t('workingHours')}>
-            <p>Понеделник - Петък</p> // TODO: 
+            <p>Понеделник - Петък</p>
             <p>08:00 – 17:00</p>
           </ContactsInfoLabel>
           <ContactsInfoLabel icon = {<LuPhoneCall/>} text={t('callUs')}>
