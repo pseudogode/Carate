@@ -375,19 +375,19 @@ const placeHolderCar: CarInfo = {
 
 function Market() {
     return (
-    <Box className={classes.root}>
-      <Link to='/order' style={{textDecoration: 'none'}}>
-        <Box className={classes.customOffer}>
-          <CarOfferCard carInfo={placeHolderCar}/>
-        </Box>
-      </Link>
-      
-      {carInfo.map((car, index) => 
-        (<Box key={index}>
-          <CarOfferCard carInfo={car}/>
-        </Box>)
-      )}
-    </Box>
+      <Box className={classes.cardContainer}>
+        <Link to='/order' style={{textDecoration: 'none'}}>
+          <Box className={classes.customOffer}>
+            <CarOfferCard carInfo={placeHolderCar}/>
+          </Box>
+        </Link>
+        
+        {carInfo.map((car, index) => 
+          (<Box key={index}>
+            <CarOfferCard carInfo={car}/>
+          </Box>)
+        )}
+      </Box>
   );
 }
 
