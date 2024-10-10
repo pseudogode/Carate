@@ -19,7 +19,7 @@ const parsePhoneNumber = (input: string) => parse(input, phoneNumberRegex);
 function Order() {
   const { handleSubmit, control } = useForm();
   const { t } = useTranslate('order');
-  const onSubmit = (d) => alert(JSON.stringify(d));
+  const onSubmit = () => alert(t('submitAlert'));
 
   const [phoneNumber, setPhoneNumber] = useState('');
   const [captchaPassed, setCaptchaPassed] = useState(true);
@@ -150,7 +150,7 @@ function Order() {
           { captchaPassed && 
             <Box className={`${classes.padding} ${classes.captchaContainer}`}>
               <Button className={classes.submitButton} type='submit'>
-                Submit
+                {t('submit')}
               </Button>
             </Box> }
         </form>

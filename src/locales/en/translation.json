@@ -29,7 +29,9 @@
       "year": "Year",
       "price": "Price",
       "details": "Details",
-      "description": "Please, provide detailed information about your request: e.g., engine, year, gearbox, color, equipment, mileage, etc."
+      "description": "Please, provide detailed information about your request: e.g., engine, year, gearbox, color, equipment, mileage, etc.",
+      "submit": "Submit request",
+      "submitAlert": "Your request is sent. We will contact you soon!"
     }
   }
 }
