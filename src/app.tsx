@@ -23,7 +23,7 @@ const router = createBrowserRouter(
     [
       <Route path="/" element={appLayout}>
         <Route index element={<Home />} />
-        <Route path='market' element={<Market />} />
+        <Route path='market/*' element={<Market />} />
         <Route path='order' element={<Order />} />
         <Route path='contacts' element={<Contacts />} />
       </Route>

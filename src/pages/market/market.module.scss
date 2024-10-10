@@ -13,6 +13,9 @@
   justify-content: center;
 }
 
+.carDialog {
+}
+
 @media screen and (max-width: 2000px) {
   .cardContainer {
     grid-template-columns: repeat(auto-fit, 250px);

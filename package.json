@@ -15,6 +15,7 @@
     "@mui/base": "^5.0.0-beta.40",
     "@mui/material": "^5.16.7",
     "axios": "^1.7.7",
+    "classnames": "^2.5.1",
     "i18next": "^23.14.0",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
