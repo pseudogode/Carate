@@ -7,10 +7,14 @@
       "contacts": "Contacts"
     },
     "contacts": {
-      "location": "Location",
-      "workingHours": "Working hours",
-      "callUs": "Call us",
-      "email": "Email"
+      "location": "location",
+      "workingHours": "working hours",
+      "callUs": "call us",
+      "email": "email",
+      "monday": "monday",
+      "friday": "friday",
+      "address": "1 Kukush street, Sofia"
+
     },
     "home": {
       "t1": "Import of luxury cars",

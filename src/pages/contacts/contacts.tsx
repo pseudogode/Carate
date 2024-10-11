@@ -10,6 +10,7 @@ import { LuClock, LuPhoneCall } from "react-icons/lu";
 import { AiOutlineMail } from "react-icons/ai";
 import ToyotaWallpaper from '../../assets/toyota-wallpaper.jpg'
 import { useTranslate } from "../../hooks/use-translate";
+import { capitalize } from "lodash";
 
 function Contacts() {
   const { t } = useTranslate('contacts');
@@ -32,17 +33,17 @@ function Contacts() {
     >
       <Box className={`${classes.info} ${classes.padding}`}>
         <Box className={`${classes.fade} ${classes.padding}`} >
-          <ContactsInfoLabel icon = {<MdOutlineLocationOn/>} text={t('location')}>
-            <p>гр. София, ул. Кукуш 1</p>
+          <ContactsInfoLabel icon = {<MdOutlineLocationOn/>} text={capitalize(t('location'))}>
+            <p>{t('address')}</p>
           </ContactsInfoLabel>
-          <ContactsInfoLabel icon = {<LuClock/>} text={t('workingHours')}>
-            <p>Понеделник - Петък</p>
+          <ContactsInfoLabel icon = {<LuClock/>} text={capitalize(t('workingHours'))}>
+            <p>{`${capitalize(t('monday'))} - ${capitalize(t('friday'))}`}</p>
             <p>08:00 – 17:00</p>
           </ContactsInfoLabel>
-          <ContactsInfoLabel icon = {<LuPhoneCall/>} text={t('callUs')}>
+          <ContactsInfoLabel icon = {<LuPhoneCall/>} text={capitalize(t('callUs'))}>
             <p>+359 89 9239925</p>
           </ContactsInfoLabel>     
-          <ContactsInfoLabel icon = {<AiOutlineMail/>} text={t('email')}>
+          <ContactsInfoLabel icon = {<AiOutlineMail/>} text={capitalize(t('email'))}>
           <p>stoianpetkov79@gmail.com</p>
           </ContactsInfoLabel>
         </Box>
